@@ -39,6 +39,13 @@ public class CraftingUtil
 		INGREDIENTS_FIELD = f;
 	}
 
+    /**
+     * Gets an ItemStack output from a JsonElement. Supports the constants defined in a _constants.json file as output, automatically using the first match.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @return the output item
+     */
     @Nonnull
     public static ItemStack getResult(JsonElement json, JsonContext context)
     {
@@ -49,6 +56,13 @@ public class CraftingUtil
         return output.get(0);
     }
 
+    /**
+     * Adds ItemStack outputs from a JsonElement to a list. Supports the constants defined in a _constants.json file.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @param list the destination list
+     */
     @SuppressWarnings("unchecked")
 	@Nonnull
     public static void addResults(JsonElement json, JsonContext context, List<ItemStack> list)
@@ -101,6 +115,12 @@ public class CraftingUtil
         }
     }
 
+    /**
+     * Merges ingredients.
+     * 
+     * @param input a stream providing the ingredients to merge.
+     * @return the merged ingredient.
+     */
     public static Ingredient merge(Stream<Ingredient> input)
     {
     	List<ItemStack> stacks = new ArrayList<>();
@@ -110,6 +130,13 @@ public class CraftingUtil
     	return Ingredient.fromStacks(stacks.toArray(new ItemStack[stacks.size()]));
     }
 
+    /**
+     * Gets an ingredient with a specifiable count. Allows normal item types and constants to be used.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @return the resulting sized ingredient
+     */
     @Nonnull
     public static SizedIngredient getSizedIngredient(JsonElement json, JsonContext context)
     {
@@ -126,6 +153,13 @@ public class CraftingUtil
     	}
     }
 
+    /**
+     * Adds SizedIngredient outputs from a JsonElement to a list. Supports the constants defined in a _constants.json file.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @param list the destination list
+     */
     @SuppressWarnings("unchecked")
 	@Nonnull
     public static void addSizedIngredients(JsonElement json, JsonContext context, List<SizedIngredient> list)
@@ -179,6 +213,13 @@ public class CraftingUtil
         list.add(new SizedIngredient(ing, count));
     }
 
+    /**
+     * Gets an ingredient.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @return the resulting sized ingredient
+     */
     @Nonnull
     public static Ingredient getIngredient(JsonElement json, JsonContext context)
     {
@@ -189,6 +230,14 @@ public class CraftingUtil
     	else return merge(output.stream());
     }
 
+
+    /**
+     * Adds Ingredient outputs from a JsonElement to a list.
+     * 
+     * @param json the JsonElement
+     * @param context the JsonContext
+     * @param list the destination list
+     */
     @SuppressWarnings("unchecked")
 	@Nonnull
     public static void addIngredients(JsonElement json, JsonContext context, List<Ingredient> list)

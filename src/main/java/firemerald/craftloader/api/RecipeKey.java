@@ -2,6 +2,12 @@ package firemerald.craftloader.api;
 
 import net.minecraft.util.ResourceLocation;
 
+/**
+ * standard ResourceLocation recipe key
+ * 
+ * @author FirEmerald
+ *
+ */
 public class RecipeKey implements IRecipeKey
 {
 	public final ResourceLocation name;

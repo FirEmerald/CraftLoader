@@ -1,0 +1,41 @@
+{
+	"{metal}_ingot_from_ore": {
+		"type": "craftloader:smelting",
+		"transformers": [
+			"mechanimation_natural_metals"
+		],
+		"ingredient": {
+            "item": "#{METAL}_ORE"
+		},
+		"result": {
+            "item": "#{METAL}_INGOT"
+		},
+		"exp": "{exp}"
+	},
+	"{metal}_ingot_from_dust": [
+		{
+			"type": "craftloader:smelting",
+			"transformers": [
+				"vanilla_metals"
+			],
+			"ingredient": {
+				"item": "#{METAL}_DUST"
+			},
+			"result": {
+				"item": "minecraft:{metal}_ingot"
+			}
+		},
+		{
+			"type": "craftloader:smelting",
+			"transformers": [
+				"mechanimation_metals"
+			],
+			"ingredient": {
+				"item": "#{METAL}_DUST"
+			},
+			"result": {
+				"item": "#{METAL}_INGOT"
+			}
+		}
+	]
+}

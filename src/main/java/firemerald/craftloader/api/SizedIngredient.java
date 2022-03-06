@@ -3,9 +3,21 @@ package firemerald.craftloader.api;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 
+/**
+ * Ingredient that has a specified item count.
+ * 
+ * @author FirEmerald
+ *
+ */
 public class SizedIngredient
 {
+	/**
+	 * The wrapped Ingredient
+	 */
 	public final Ingredient ingredient;
+	/**
+	 * The stack size
+	 */
 	public final int count;
 
 	public SizedIngredient(Ingredient ingredient, int count)

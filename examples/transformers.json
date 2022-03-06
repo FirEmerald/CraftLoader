@@ -1,0 +1,25 @@
+{
+	"vanilla_metals": {
+		"count": 2,
+		"metal": [
+			"iron",
+			"gold"
+		],
+		"metal_alt": [
+			"iron",
+			"golden"
+		],
+		"Metal": [
+			"Iron",
+			"Gold"
+		],
+		"METAL": [
+			"IRON",
+			"GOLD"
+		],
+		"exp": [
+			0.7,
+			1.0
+		]
+	},
+}
