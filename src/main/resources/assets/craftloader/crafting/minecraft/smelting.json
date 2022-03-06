@@ -1,0 +1,14 @@
+{
+	"example_recipe": {
+		"disabled": true,
+		"type": "craftloader:smelting",
+		"ingredient": {
+            "item": "minecraft:iron_ingot"
+		},
+		"result": {
+            "item": "minecraft:iron_bars",
+			"count": 3
+		},
+		"exp": 0.0
+	}
+}

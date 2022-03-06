@@ -1,0 +1,12 @@
+{
+	"ingredients": {
+		"bucket": "firemerald.craftloader.factories.BucketIngredientFactory"
+	},
+	"recipes": {
+		"dummy": "firemerald.craftloader.factories.DummyRecipeFactory",
+		"crafting_shaped": "firemerald.craftloader.factories.ShapedIngredientRecipeFactory",
+		"crafting_shapeless": "firemerald.craftloader.factories.ShapelessIngredientRecipeFactory",
+		"bucket_shaped": "firemerald.craftloader.factories.ShapedBucketIngredientRecipeFactory",
+		"bucket_shapeless": "firemerald.craftloader.factories.ShapelessBucketIngredientRecipeFactory"
+	}
+}
