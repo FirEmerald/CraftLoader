@@ -1,10 +1,10 @@
-[![Discord](https://img.shields.io/discord/176190900945289237?style=flat-square&logo=discord&logoColor=ffffff&label=Discord)](https://discord.gg/ykHRhmC)
+[![Discord](https://img.shields.io/discord/176190900945289237?style=flat-square&logo=discord&logoColor=ffffff&label=Discord)](https://discord.gg/ykHRhmC)  
+[![Curseforge](https://cf.way2muchnoise.eu/short_590683_downloads.svg?badge_style=flat)](https://www.curseforge.com/minecraft/mc-mods/craftloader)  
+
 # CraftLoader
 CraftLoader is a small framework mod that allows other modders to register "loaders" for their own crafting systems, such as machines, and loads them from resource packs, saves, and mods themselves.
 
-[Download on Curse](https://www.curseforge.com/minecraft/mc-mods/craftloader)
-
-A very bad explanation of how to use:
+A very bad explanation of how to use:  
  * Recipe factories, registered the same way as vanilla crafting table recipes, are found in assets/\<recipe owner mod ID\>/crafting/\<loader owner mod ID\>/\<name\>_factories.json for mods and resource packs, and data/crafting/\<recipe owner mod ID\>/\<loader owner mod ID\>/\<name\>_factories.json - for instance, with a mod of ID "examplemod", smelting factories would be found in assets/examplemod/crafting/minecraft/smelting_factories.json for mods and resourcepacks, and data/crafting/examplemod/minecraft/smelting_factories.json for saves
  * Similarly, the recipes themselves are defined in assets/\<recipe owner mod ID\>/crafting/\<loader owner mod ID\>/\<name\>.json and data/crafting/\<recipe owner mod ID\>/\<loader owner mod ID\>/\<name\>.json, respectively.
  * Transformers, which are a map of String types to maps of string keys to lists of replacement values, can be used to greatly reduce the number of required recipes. They are defined in assets/\<recipe owner mod ID\>transformers.json and data/crafting/\<recipe owner mod ID\>/transformers.json.
